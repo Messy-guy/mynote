@@ -7,7 +7,6 @@ function showNotes() {
 }
 showNotes();
 
-
 function updateStorage() {
     localStorage.setItem("notes", notesContainer.innerHTML);
 }
@@ -34,18 +33,12 @@ createBtn.addEventListener("click", () => {
     notesContainer.appendChild(inputBox);
 
     attachEventListeners();
-    updateStorage();
 });
-
 
 function attachEventListeners() {
     const notes = document.querySelectorAll(".input-box");
 
     notes.forEach(note => {
-        note.addEventListener('keyup', function () {
-            updateStorage();
-        });
-
         note.querySelector('.delete').addEventListener('click', function () {
             note.remove();
             updateStorage();
@@ -56,7 +49,6 @@ function attachEventListeners() {
         });
     });
 }
-
 
 function disableButtonEditing() {
     const buttons = document.querySelectorAll(".delete, .save");
