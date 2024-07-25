@@ -1,44 +1,48 @@
-*{
-    margin :0;
-    padding :0;
+* {
+    margin: 0;
+    padding: 0;
     font-family: sans-serif;
     box-sizing: border-box;
 }
-.container{
-    width:100%;
+.container {
+    display: block;
+    align-items: center;
+    width: 100%;
     min-height: 100vh;
-    background: linear-gradient(135deg,#ccd5ae,#d4a373);
-    color:#555c26;
+    background: linear-gradient(135deg, #ccd5ae, #d4a373);
+    color: #555c26;
     padding-top: 4%;
-    padding-left: 10%;
+    padding-left: 40%;
 }
-.container h1{
+.container h1 {
     display: flex;
     align-items: center;
     font-size: 23px;
     font-weight: 600;
+    text-shadow: #0c0c0c 2px 2px 2px;
 }
-.container h1 img{
+.container h1 img {
     height: 40px;
     width: 40px;
 }
-.container button img{
+.container button img {
     width: 20px;
     margin-right: 8px;
-
 }
-.container button{
+.container button {
     display: flex;
     align-items: center;
-    background: linear-gradient(#e3d5ca,#85746b);
+    background: linear-gradient(#e3d5ca, #85746b);
     color: #3f441d;
     font-size: 13px;
     outline: 0;
     border: 0;
     border-radius: 40px;
     padding: 2px 6px;
+    box-shadow: #0c0c0c 2px 2px 4px;
 }
-.input-box{
+
+.input-box {
     position: relative;
     width: 100%;
     max-width: 500px;
@@ -49,10 +53,28 @@
     outline: none;
     border-radius: 15px;
 }
-.input-box img{
+
+.input-box img {
     width: 25px;
+    cursor: pointer;
+}
+
+.input-box .delete {
+    position: absolute;
+    bottom: 10px;
+    right: 45px;
+}
+
+.input-box .save {
     position: absolute;
     bottom: 10px;
     right: 15px;
-    cursor: pointer;
+}
+
+button:hover {
+    background: linear-gradient(#e3d5ca, #574d48);
+}
+
+button:active {
+    background: linear-gradient(#252221, #d9e0a9);
 }
